@@ -1,25 +1,25 @@
-import {SafeAreaView, View, StyleSheet, Image} from 'react-native';
+import { SafeAreaView, View, StyleSheet, Image } from "react-native";
 
-function Header(){
-    return(
-        <SafeAreaView>
-            <View style={styles.header}>
-            <Image source ={require('../../Assets/img/img-carne-removebg-preview.png')}
-            style={{width:165, height: 48 }}
-            />
-            </View>
-        </SafeAreaView>
-    );
+import Logo from "../../assets/img/logo.png";
+
+function Header() {
+  return (
+    <SafeAreaView style={styles.header}>
+      <Image source={Logo} style={{ width: 200, height: 48 }} />
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-    header:{
-        backgroundColor: 'rgba(128, 0, 0, 0.75)',
-        alignItems: 'center',
-        height: 50,
-        margin: 0
-    }
-
+  header: {
+    backgroundColor: "rgba(128, 0, 0, 0.75)",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    height: 90,
+    margin: 0,
+    width: 500,
+    paddingBottom: 10,
+  },
 });
 
 export default Header;

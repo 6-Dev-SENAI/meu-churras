@@ -4,7 +4,7 @@ const StylesContent = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     backgroundColor: "#A45959",
   },
   img: {
