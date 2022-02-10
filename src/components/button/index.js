@@ -19,7 +19,8 @@ const style = StyleSheet.create({
     botao: {
         height: 30,
         width: 145,
-        backgroundColor: "#800000"
+        backgroundColor: "#800000",
+        margin: 0,
     },
     text:{
 

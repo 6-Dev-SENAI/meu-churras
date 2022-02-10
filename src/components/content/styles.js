@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
-
+import { Dimensions } from "react-native"; 
 const StylesContent = StyleSheet.create({
   container: {
     flex: 1,
+    
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     backgroundColor: "#A45959",
   },
   img: {

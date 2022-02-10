@@ -1,6 +1,6 @@
 import { SafeAreaView, View, StyleSheet, Image } from "react-native";
 
-import Logo from "../../assets/img/logo.png";
+import Logo from "../../Assets/img/logo.png";
 
 function Header() {
   return (
@@ -19,6 +19,8 @@ const styles = StyleSheet.create({
     margin: 0,
     width: 500,
     paddingBottom: 10,
+    position: "absolute",
+    top: 0 ,
   },
 });
 
