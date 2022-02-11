@@ -4,13 +4,13 @@ import Header from "../header";
 
 import Styles from "./styles";
 
-import BackgroundIMG from "../../Assets/background.png";
+import BackgroundIMG from "../../assets/images/background.png";
 
 export default function Content(props) {
   return (
     <SafeAreaView style={Styles.container}>
       <Header />
-      <View style={{justifyContent: "center", alignItems: "center"}}>{props.children}</View>
+      <View style={Styles.view}>{props.children}</View>
       <Image style={Styles.img} source={BackgroundIMG} />
     </SafeAreaView>
   );
