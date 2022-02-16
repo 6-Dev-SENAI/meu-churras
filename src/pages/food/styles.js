@@ -20,7 +20,26 @@ const Style = StyleSheet.create({
     width: 150,
     left: 10,
     top: 75
+  },
+
+  geral:{
+  justifyContent:"space-evenly",
+    height: 500,
+    width: 100
+    
+  },
+  organize:{
+    display:"flex",
+    flexDirection:"row",
+    width:100,
+    
+    
   }
+  
+
+  
+
+
 });
 
 export default Style;
