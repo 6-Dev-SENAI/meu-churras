@@ -20,10 +20,32 @@ const Style = StyleSheet.create({
     width: 150,
     left: 10,
     top: 75
-    
- 
-
+  },
+  containergeral:{
+    display:"flex",
+    flexDirection:"column",
+    height: 1000, 
+    width: 1000
+  },
+  boxconteudo:{
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    width: 300,
+    height: 50
+  },
+  img:{
+    width: 50,
+    height: 50
+  },
+  sinal:{
+    padding: 1,
+    borderRadius:15,
+    backgroundColor:"#CACACA",
+    width:20,
+    textAlign:"center",
+    fontWeight:"bold"
   }
+
 });
 
 export default Style;
