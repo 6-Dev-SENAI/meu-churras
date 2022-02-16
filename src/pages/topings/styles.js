@@ -1,19 +1,18 @@
 import { StyleSheet } from "react-native";
 
 const Style = StyleSheet.create({
-  presentation: {
-    fontSize: 35,
-    fontWeight: "bold",
-    textAlign: "center",
-    width: 250,
+  container: {
+    height: 700,
+    width: 400,
   },
-
-  backimg: {
-    width: 300,
-    height: 300,
+  scrollContainer: {
+    maxHeight: 475,
+    marginBottom: 15,
+  },
+  btnContainer: {
+    width: 400,
     justifyContent: "center",
     alignItems: "center",
-    margin: "auto",
   },
 });
 
