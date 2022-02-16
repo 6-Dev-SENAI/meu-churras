@@ -1,4 +1,5 @@
 import { Alert, TouchableOpacity, Text } from "react-native";
+import React, {Component} from 'react';
 
 import Style from "./styles";
 

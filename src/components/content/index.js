@@ -1,4 +1,5 @@
 import { Image, SafeAreaView, View } from "react-native";
+import React, {Component} from 'react';
 
 import Header from "../header";
 

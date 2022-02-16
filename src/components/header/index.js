@@ -1,4 +1,5 @@
 import { SafeAreaView, Image } from "react-native";
+import React, {Component} from 'react';
 
 import Styles from "./styles";
 
