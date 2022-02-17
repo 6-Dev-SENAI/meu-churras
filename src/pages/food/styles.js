@@ -16,28 +16,43 @@ const Style = StyleSheet.create({
     margin: "auto",
   },
   title_style: {
-    height: 28,
-    width: 150,
+    height: 8,
+    width: 180,
     left: 10,
     top: 75
   },
 
-  geral:{
-  justifyContent:"space-evenly",
+  geral: {
+    paddingLeft: 20,
+    width: 900,
     height: 500,
-    width: 100
-    
+    alignItems:"center", 
+    justifyContent:"center",
+    flexDirection: "column",
+    alignItems:"center",
   },
-  organize:{
-    display:"flex",
-    flexDirection:"row",
-    width:100,
+
+
+  organize: {
+    display: "flex",
+    flexDirection: "row",
+    width: 300,
+    height: 100,
+    alignItems:"center",
     
-    
-  }
+
+  },
   
 
-  
+  texto:{
+      paddingLeft: 20,
+      alignItems:"center",
+      width: 120,
+      flexDirection: "column"
+  }
+
+
+
 
 
 });

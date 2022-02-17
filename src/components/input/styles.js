@@ -5,9 +5,11 @@ const Style = StyleSheet.create({
   input: {
     height: 20,
     margin: 12,
-    padding: 1,
-    width : 50,
+    width : 40,
+    left: 0,
     backgroundColor:'#ffff',
+    flexDirection: "column"
+    
    
   }
 });

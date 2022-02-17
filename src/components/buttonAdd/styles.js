@@ -2,22 +2,21 @@ import { StyleSheet } from "react-native";
 
 const Style = StyleSheet.create({
   button: {
-    height: 30,
-    width: 145,
-    backgroundColor: "#800000",
+    width: 52,
+    height: 13,
+    backgroundColor: "#C4C4C4",
     margin: 0,
     
   },
   text: {
-    height: 30,
-    width: 145,
+    Width: 46,
+    Height: 16,
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
     color: "#ffffff",
-    fontSize: 20,
-    padding: 0,
-    margin: 0,
+    fontSize: 12,
+    
   },
 });
 

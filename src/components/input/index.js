@@ -11,7 +11,7 @@ function  TextoInput() {
         style={styles.input}
         onChangeText={onChangeNumber}
         value={number}
-        placeholder="Insira os dados"
+        placeholder="   -"
         keyboardType="numeric"
       />
     );

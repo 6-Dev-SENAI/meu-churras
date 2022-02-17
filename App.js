@@ -8,5 +8,5 @@ import Values from "./src/pages/values";
 import Food from "./src/pages/food";
 
 export default function App() {
-  return <Home />;
+  return <Food />;
 }
