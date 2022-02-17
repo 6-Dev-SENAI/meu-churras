@@ -2,15 +2,17 @@ import { StyleSheet } from "react-native";
 
 const Style = StyleSheet.create({
   button: {
-    width: 52,
-    height: 13,
+    width: 55,
+    height: 15,
     backgroundColor: "#C4C4C4",
     margin: 0,
-    
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 2.5
   },
   text: {
-    Width: 46,
-    Height: 16,
+    width: 46,
+    height: 16,
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",

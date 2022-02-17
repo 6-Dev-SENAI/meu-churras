@@ -19,42 +19,38 @@ const Style = StyleSheet.create({
     height: 8,
     width: 180,
     left: 10,
-    top: 75
+    top: 75,
   },
 
   geral: {
     paddingLeft: 20,
     width: 900,
     height: 500,
-    alignItems:"center", 
-    justifyContent:"center",
+    alignItems: "center",
+    justifyContent: "center",
     flexDirection: "column",
-    alignItems:"center",
+    alignItems: "center",
   },
-
 
   organize: {
     display: "flex",
     flexDirection: "row",
     width: 300,
-    height: 100,
-    alignItems:"center",
-    
-
+    height: 75,
+    alignItems: "center",
+    justifyContent: "space-evenly",
   },
-  
 
-  texto:{
-      paddingLeft: 20,
-      alignItems:"center",
-      width: 120,
-      flexDirection: "column"
-  }
+  texto: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 120,
+    flexDirection: "column",
+  },
 
-
-
-
-
+  inputBox: {
+    alignItems: "flex-end",
+  },
 });
 
 export default Style;

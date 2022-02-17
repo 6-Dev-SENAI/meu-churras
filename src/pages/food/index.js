@@ -20,44 +20,36 @@ function Food() {
       ></ChurrasTitle>
 
       <View style={Styles.geral}>
+        <View style={Styles.inputBox}>
+          <View style={Styles.organize}>
+            <Image source={boi} />
+            <Text style={Styles.texto}>Carne Bovina </Text>
+            <TextoInput />
+            <Text>kg</Text>
+          </View>
 
-        <View style={Styles.organize}>
-
-          <Image source={boi} />
-          <Text style={Styles.texto}>Carne Bovina </Text>
-          <TextoInput />
-          <Text>kg</Text>
-        </View>
-
-        <View>
-          <ButtonAdd  />
-        </View>
-
-
-        <View style={Styles.organize}>
-          <Image source={galinha} />
-          <Text style={Styles.texto}>Aves</Text>
-          <TextoInput />
-          <Text>kg</Text>
-        </View>
-
-        <View>
           <ButtonAdd />
         </View>
+        <View style={Styles.inputBox}>
+          <View style={Styles.organize}>
+            <Image source={galinha} />
+            <Text style={Styles.texto}>Aves </Text>
+            <TextoInput />
+            <Text>kg</Text>
+          </View>
 
-
-
-        <View style={Styles.organize}>
-          <Image source={porco} />
-          <Text style={Styles.texto}>Carne suina</Text>
-          <TextoInput />
-          <Text>kg</Text>
-        </View>
-        <View>
           <ButtonAdd />
         </View>
+        <View style={Styles.inputBox}>
+          <View style={Styles.organize}>
+            <Image source={porco} />
+            <Text style={Styles.texto}>Carne Suína </Text>
+            <TextoInput />
+            <Text>kg</Text>
+          </View>
 
-
+          <ButtonAdd />
+        </View>
       </View>
 
       <ButtonComponent title="Avançar" />
