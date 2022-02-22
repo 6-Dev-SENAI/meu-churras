@@ -16,22 +16,21 @@ const Style = StyleSheet.create({
     margin: "auto",
   },
   title_style: {
-    height: 28,
-    width: 150,
-    left: 10,
-    top: 75
+  paddingBottom:10,
+    
   },
   containergeral:{
     display:"flex",
     flexDirection:"column",
-    height: 1000, 
-    width: 1000
+    height: 600, 
+    width: 400
   },
   boxconteudo:{
     flexDirection: "row",
-    justifyContent: "space-evenly",
-    width: 300,
-    height: 50
+    justifyContent: "space-between",
+    width: 200,
+    height: 150, 
+  
   },
   img:{
     width: 50,

@@ -24,22 +24,22 @@ function People() {
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={crianca} />
           <TouchableOpacity onPress={() => Alert.alert("Left button pressed")}>
-            <Text style={Style.sinal}>+</Text>
+            <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
           <Text>0</Text>
           <TouchableOpacity onPress={() => Alert.alert("Right button pressed")}>
-            <Text style={Style.sinal}>-</Text>
+            <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>  
         </View>
         
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={Mulher} />
           <TouchableOpacity onPress={() => Alert.alert("Left button pressed")}>
-            <Text style={Style.sinal}>+</Text>
+            <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
           <Text>0</Text>
           <TouchableOpacity onPress={() => Alert.alert("Right button pressed")}>
-            <Text style={Style.sinal}>-</Text>
+            <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>  
         </View>
 
@@ -47,11 +47,11 @@ function People() {
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={homem} />
           <TouchableOpacity onPress={() => Alert.alert("")}>
-            <Text style={Style.sinal}>+</Text>
+            <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
           <Text>0</Text>
           <TouchableOpacity onPress={() => Alert.alert("")}>
-            <Text style={Style.sinal}>-</Text>
+            <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>  
         </View>
 
