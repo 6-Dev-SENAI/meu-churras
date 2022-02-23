@@ -13,6 +13,7 @@ function  TextoInput() {
         value={number}
         placeholder="   -"
         keyboardType="numeric"
+        maxLength={4}
       />
     );
   }

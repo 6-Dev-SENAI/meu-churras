@@ -4,6 +4,7 @@ import React from "react";
 import Content from "../../components/content";
 import ButtonComponent from "../../components/button";
 import ChurrasTitle from "../../components/title";
+import OthersButton from "../../components/OthersButton";
 import Styles from "./styles";
 import TextoInput from "../../components/input";
 import boi from "../../assets/images/BOI.png";
@@ -50,8 +51,10 @@ function Food() {
 
           <ButtonAdd />
         </View>
+        <OthersButton text="Topings"/>
       </View>
-
+      
+      
       <ButtonComponent title="Avançar" text="Payment" />
     </Content>
   );
