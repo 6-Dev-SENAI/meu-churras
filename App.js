@@ -28,9 +28,9 @@ function MyStack() {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="People" component={People} />
       <Stack.Screen name="Food" component={Food} />
-      <Stack.Screen name="Values" component={Values} />
       <Stack.Screen name="Topings" component={Topings} />
       <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="Values" component={Values} />
     </Stack.Navigator>
   );
 }

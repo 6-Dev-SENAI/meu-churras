@@ -30,7 +30,7 @@ function Topings({ route, navigation }) {
   const { children, women, men, food } = route.params;
 
   const next = () => {
-    navigation.navigate("Values", {
+    navigation.navigate("Payment", {
       children,
       women,
       men,
