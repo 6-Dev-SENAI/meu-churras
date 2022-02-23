@@ -52,7 +52,7 @@ function Food() {
         </View>
       </View>
 
-      <ButtonComponent title="Avançar" />
+      <ButtonComponent title="Avançar" text="Payment" />
     </Content>
   );
 }

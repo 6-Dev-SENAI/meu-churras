@@ -17,7 +17,7 @@ function Payment() {
          
          </ChurrasTitle>
    
-         <ButtonComponent  title="Confirmar pedido"/>
+         <ButtonComponent  title="Confirmar pedido" text="Values"/>
      
     </Content>
   );

@@ -14,7 +14,7 @@ function Home() {
       <ImageBackground source={home} style={Style.backimg}>
         <Text style={Style.presentation}>Bem vindo ao App do seu CHURRAS!</Text>
       </ImageBackground>
-      <ButtonComponent />
+      <ButtonComponent text="People" />
     </Content>
   );
 }

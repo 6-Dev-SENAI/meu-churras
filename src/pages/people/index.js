@@ -57,7 +57,7 @@ function People() {
 
       </View>
 
-      <ButtonComponent title="Avançar" />
+      <ButtonComponent title="Avançar" text="Food" />
     </Content>
   );
 }
