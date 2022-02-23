@@ -20,6 +20,8 @@ const Style = StyleSheet.create({
     alignItems: "center",
     width: 120,
     flexDirection: "column",
+    fontSize: 18,
+    color: "#fff"
   },
   input: {
     height: 20,

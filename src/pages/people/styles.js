@@ -27,6 +27,10 @@ const Style = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
+  text: {
+    fontWeight: "bold",
+    color: "#fff"
+  }
 });
 
 export default Style;

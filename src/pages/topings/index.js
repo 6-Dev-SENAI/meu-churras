@@ -30,7 +30,7 @@ function Topings({ route, navigation }) {
   const { children, women, men, food } = route.params;
 
   const next = () => {
-    navigation.navigate("Topings", {
+    navigation.navigate("Values", {
       children,
       women,
       men,
@@ -152,7 +152,7 @@ function Topings({ route, navigation }) {
           />
         </ScrollView>
 
-        <ButtonComponent title="Próximo" next={next} />
+        <ButtonComponent title="Avançar" next={next} />
       </View>
     </Content>
   );

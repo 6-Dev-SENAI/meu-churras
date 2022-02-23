@@ -67,7 +67,7 @@ function People({ navigation }) {
           >
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text>{children}</Text>
+          <Text style={Style.text}>{children}</Text>
           <TouchableOpacity
             onPress={() => upItem(children, setChildren, "children")}
           >
@@ -80,7 +80,7 @@ function People({ navigation }) {
           <TouchableOpacity onPress={() => downItem(women, setWomen, "women")}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text>{women}</Text>
+          <Text style={Style.text}>{women}</Text>
           <TouchableOpacity onPress={() => upItem(women, setWomen, "women")}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
@@ -91,7 +91,7 @@ function People({ navigation }) {
           <TouchableOpacity onPress={() => downItem(men, setMen, "men")}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text>{men}</Text>
+          <Text style={Style.text}>{men}</Text>
           <TouchableOpacity onPress={() => upItem(men, setMen, "men")}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>

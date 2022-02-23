@@ -21,7 +21,7 @@ export default function Topping(props) {
 
     setQuantity(newQuantity);
     setPriceDisplay(newPrice);
-    state.setState(newPrice);
+    state.setValue(newPrice);
   };
 
   const handleDownQuantity = () => {
@@ -33,7 +33,7 @@ export default function Topping(props) {
 
       setQuantity(newQuantity);
       setPriceDisplay(newPrice);
-      state.setState(newPrice);
+      state.setValue(newPrice);
     }
   };
 
