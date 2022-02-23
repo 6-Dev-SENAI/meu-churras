@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Content from "../../components/content";
 import ChurrasTitle from "../../components/title";
@@ -7,34 +7,152 @@ import Topping from "../../components/topping";
 
 import Style from "./styles";
 
-import { ScrollView, View } from "react-native";
+import { Dimensions, ScrollView, View } from "react-native";
 
 import Imgs from "./img";
 
-function Topings() {
+function Topings({ route, navigation }) {
+  const height = (Dimensions.get("window").height / 100) * 69;
+
+  const [guarana, setGuarana] = useState(0);
+  const [coca, setCoca] = useState(0);
+  const [suco, setSuco] = useState(0);
+  const [corona, setCorona] = useState(0);
+  const [cerveja, setCerveja] = useState(0);
+  const [energetico, setEnergetico] = useState(0);
+  const [pao, setPao] = useState(0);
+  const [sal, setSal] = useState(0);
+  const [carvao, setCarvao] = useState(0);
+  const [petisco, setPetisco] = useState(0);
+  const [fosforo, setFosforo] = useState(0);
+  const [gelo, setGelado] = useState(0);
+
+  const { children, women, men, food } = route.params;
+
+  const next = () => {
+    navigation.navigate("Topings", {
+      children,
+      women,
+      men,
+      food,
+      topings: {
+        guarana,
+        coca,
+        suco,
+        corona,
+        cerveja,
+        energetico,
+        pao,
+        sal,
+        carvao,
+        petisco,
+        fosforo,
+        gelo,
+      },
+    });
+  };
+
   return (
     <Content>
-      <View style={Style.container}>
+      <View
+        style={{
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
+
+          height: height,
+        }}
+      >
         <ChurrasTitle text="Adicionais:" />
 
         <ScrollView style={Style.scrollContainer} horizontal={false}>
-          <Topping img={Imgs[0]} title="Guaraná" price={5.79} unity="2L" />
-          <Topping img={Imgs[1]} title="Coca-Cola" price={8.49} unity="2L" />
-          <Topping img={Imgs[2]} title="Suco" price={7.79} unity="1L" />
-          <Topping img={Imgs[3]} title="Corona" price={7.99} unity="1un" />
-          <Topping img={Imgs[4]} title="Heineken" price={5.39} unity="1un" />
-          <Topping img={Imgs[5]} title="Energético" price={6.59} unity="1un" />
-          <Topping img={Imgs[6]} title="Pão de Alho" price={9.29} unity="1pct" />
-          <Topping img={Imgs[7]} title="Sal Grosso" price={3.39} unity="1pct" />
-          <Topping img={Imgs[8]} title="Carvão" price={13.9} unity="2kg" />
-          <Topping img={Imgs[9]} title="Petiscos" price={22.96} unity="1pct" />
-          <Topping img={Imgs[10]} title="Acendedor" price={12.6} unity="1pct" />
-          <Topping img={Imgs[11]} title="Gelo" price={11.0} unity="1pct" />
+          <Topping
+            img={Imgs[0]}
+            title="Guaraná"
+            price={5.79}
+            unity="2L"
+            state={{ value: guarana, setValue: setGuarana }}
+          />
+          <Topping
+            img={Imgs[1]}
+            title="Coca-Cola"
+            price={8.49}
+            unity="2L"
+            state={{ value: coca, setValue: setCoca }}
+          />
+          <Topping
+            img={Imgs[2]}
+            title="Suco"
+            price={7.79}
+            unity="1L"
+            state={{ value: suco, setValue: setSuco }}
+          />
+          <Topping
+            img={Imgs[3]}
+            title="Corona"
+            price={7.99}
+            unity="1un"
+            state={{ value: corona, setValue: setCorona }}
+          />
+          <Topping
+            img={Imgs[4]}
+            title="Heineken"
+            price={5.39}
+            unity="1un"
+            state={{ value: cerveja, setValue: setCerveja }}
+          />
+          <Topping
+            img={Imgs[5]}
+            title="Energético"
+            price={6.59}
+            unity="1un"
+            state={{ value: energetico, setValue: setEnergetico }}
+          />
+          <Topping
+            img={Imgs[6]}
+            title="Pão de Alho"
+            price={9.29}
+            unity="1pct"
+            state={{ value: pao, setValue: setPao }}
+          />
+          <Topping
+            img={Imgs[7]}
+            title="Sal Grosso"
+            price={3.39}
+            unity="1pct"
+            state={{ value: sal, setValue: setSal }}
+          />
+          <Topping
+            img={Imgs[8]}
+            title="Carvão"
+            price={13.9}
+            unity="2kg"
+            state={{ value: carvao, setValue: setCarvao }}
+          />
+          <Topping
+            img={Imgs[9]}
+            title="Petiscos"
+            price={22.96}
+            unity="1pct"
+            state={{ value: petisco, setValue: setPetisco }}
+          />
+          <Topping
+            img={Imgs[10]}
+            title="Acendedor"
+            price={12.6}
+            unity="1pct"
+            state={{ value: fosforo, setValue: setFosforo }}
+          />
+          <Topping
+            img={Imgs[11]}
+            title="Gelo"
+            price={11.0}
+            unity="1pct"
+            state={{ value: gelo, setValue: setGelado }}
+          />
         </ScrollView>
 
-        <View style={Style.btnContainer}>
-          <ButtonComponent title="Add ao pedido" />
-        </View>
+        <ButtonComponent title="Próximo" next={next} />
       </View>
     </Content>
   );

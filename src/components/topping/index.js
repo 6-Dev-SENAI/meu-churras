@@ -10,6 +10,8 @@ export default function Topping(props) {
   const price = props.price || 0;
   const unity = props.unity || null;
 
+  const state = props.state;
+
   const [quantity, setQuantity] = useState(0);
   const [priceDisplay, setPriceDisplay] = useState(price * quantity);
 
@@ -19,14 +21,20 @@ export default function Topping(props) {
 
     setQuantity(newQuantity);
     setPriceDisplay(newPrice);
+    state.setState(newPrice);
   };
 
   const handleDownQuantity = () => {
-    let newQuantity = quantity - 1;
-    let newPrice = newQuantity * price;
+    if (quantity == 0) {
+      Alert.alert("Limite mínimo de 0 já selecionado!");
+    } else {
+      let newQuantity = quantity - 1;
+      let newPrice = newQuantity * price;
 
-    setQuantity(newQuantity);
-    setPriceDisplay(newPrice);
+      setQuantity(newQuantity);
+      setPriceDisplay(newPrice);
+      state.setState(newPrice);
+    }
   };
 
   return (

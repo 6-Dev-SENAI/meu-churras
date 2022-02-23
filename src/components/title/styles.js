@@ -4,9 +4,9 @@ const Styles = StyleSheet.create({
   title_style: {
     color: "#000000",
     textAlign: "left",
-    fontSize: 23,
+    fontSize: 25,
     textDecorationLine: "underline",
-    bottom:90,
+    fontWeight: "bold",
   },
 });
 

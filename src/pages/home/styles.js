@@ -7,14 +7,6 @@ const Style = StyleSheet.create({
     textAlign: "center",
     width: 250,
   },
-
-  backimg: {
-    width: 300,
-    height: 300,
-    justifyContent: "center",
-    alignItems: "center",
-    margin: "auto",
-  },
 });
 
 export default Style;

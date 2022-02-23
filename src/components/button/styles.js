@@ -6,7 +6,6 @@ const Style = StyleSheet.create({
     width: 145,
     backgroundColor: "#800000",
     margin: 0,
-    
   },
   text: {
     height: 30,

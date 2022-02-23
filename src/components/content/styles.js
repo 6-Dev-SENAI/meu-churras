@@ -4,11 +4,9 @@ const StylesContent = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#A45959",
   },
   view: {
-    justifyContent: "center",
     alignItems: "center",
   },
   img: {
@@ -16,6 +14,7 @@ const StylesContent = StyleSheet.create({
     height: 145,
     position: "absolute",
     bottom: 50,
+    zIndex: -1000
   },
 });
 
