@@ -7,9 +7,20 @@ const Style = StyleSheet.create({
     marginVertical: 5,
     width: 300,
   },
-  text: {
+  title: {
     color: "#fff",
     fontSize: 16,
+    width: 125,
+  },
+  value: {
+    color: "#fff",
+    fontSize: 16,
+    width: 80,
+  },
+  price: {
+    color: "#fff",
+    fontSize: 16,
+    width: 65,
   },
 });
 

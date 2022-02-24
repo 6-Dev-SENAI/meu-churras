@@ -21,7 +21,14 @@ export default function Topping(props) {
 
     setQuantity(newQuantity);
     setPriceDisplay(newPrice);
-    state.setValue(newPrice);
+    state.setValue({
+      name: title,
+      values: {
+        weight: newQuantity.toFixed(0),
+        price: newPrice.toFixed(2),
+      },
+      unity,
+    });
   };
 
   const handleDownQuantity = () => {
@@ -33,7 +40,14 @@ export default function Topping(props) {
 
       setQuantity(newQuantity);
       setPriceDisplay(newPrice);
-      state.setValue(newPrice);
+      state.setValue({
+        name: title,
+        values: {
+          weight: newQuantity.toFixed(0),
+          price: newPrice.toFixed(2),
+        },
+        unity,
+      });
     }
   };
 

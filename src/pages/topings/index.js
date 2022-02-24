@@ -11,29 +11,35 @@ import { Dimensions, ScrollView, View } from "react-native";
 
 import Imgs from "./img";
 
+const defaultState = {
+  name: "Item",
+  values: {
+    weight: 0,
+    price: 0,
+  },
+};
+
 function Topings({ route, navigation }) {
   const height = (Dimensions.get("window").height / 100) * 69;
 
-  const [guarana, setGuarana] = useState(0);
-  const [coca, setCoca] = useState(0);
-  const [suco, setSuco] = useState(0);
-  const [corona, setCorona] = useState(0);
-  const [cerveja, setCerveja] = useState(0);
-  const [energetico, setEnergetico] = useState(0);
-  const [pao, setPao] = useState(0);
-  const [sal, setSal] = useState(0);
-  const [carvao, setCarvao] = useState(0);
-  const [petisco, setPetisco] = useState(0);
-  const [fosforo, setFosforo] = useState(0);
-  const [gelo, setGelado] = useState(0);
+  const [guarana, setGuarana] = useState({ ...defaultState });
+  const [coca, setCoca] = useState({ ...defaultState });
+  const [suco, setSuco] = useState({ ...defaultState });
+  const [corona, setCorona] = useState({ ...defaultState });
+  const [cerveja, setCerveja] = useState({ ...defaultState });
+  const [energetico, setEnergetico] = useState({ ...defaultState });
+  const [pao, setPao] = useState({ ...defaultState });
+  const [sal, setSal] = useState({ ...defaultState });
+  const [carvao, setCarvao] = useState({ ...defaultState });
+  const [petisco, setPetisco] = useState({ ...defaultState });
+  const [fosforo, setFosforo] = useState({ ...defaultState });
+  const [gelo, setGelado] = useState({ ...defaultState });
 
-  const { children, women, men, food } = route.params;
+  const { paying, food } = route.params;
 
   const next = () => {
     navigation.navigate("Payment", {
-      children,
-      women,
-      men,
+      paying,
       food,
       topings: {
         guarana,
@@ -63,7 +69,7 @@ function Topings({ route, navigation }) {
           height: height,
         }}
       >
-        <ChurrasTitle text="Adicionais:" />
+        <ChurrasTitle text="Algum opicional da lista?" />
 
         <ScrollView style={Style.scrollContainer} horizontal={false}>
           <Topping

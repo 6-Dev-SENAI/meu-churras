@@ -18,7 +18,7 @@ import Mulher from "../../assets/images/imagem-mulher.png";
 import Style from "./styles";
 
 function People({ navigation }) {
-  const [children, setChildren] = useState(0);
+  const [kid, setKid] = useState(0);
   const [men, setMen] = useState(0);
   const [women, setWomen] = useState(0);
 
@@ -35,11 +35,17 @@ function People({ navigation }) {
   }
 
   const next = () => {
-    navigation.navigate("Food", {
-      children,
-      women,
-      men,
-    });
+    if (kid === 0 && women === 0 && men === 0)
+      Alert.alert("Por favor, selecione pelo menos uma pessoa ao churrasco!");
+    else {
+      navigation.navigate("Food", {
+        people: {
+          men,
+          women,
+          kid,
+        },
+      });
+    }
   };
 
   const height = (Dimensions.get("window").height / 100) * 69;
@@ -62,37 +68,33 @@ function People({ navigation }) {
 
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={crianca} />
-          <TouchableOpacity
-            onPress={() => downItem(children, setChildren, "children")}
-          >
+          <TouchableOpacity onPress={() => downItem(kid, setKid)}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text style={Style.text}>{children}</Text>
-          <TouchableOpacity
-            onPress={() => upItem(children, setChildren, "children")}
-          >
+          <Text style={Style.text}>{kid}</Text>
+          <TouchableOpacity onPress={() => upItem(kid, setKid)}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
         </View>
 
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={Mulher} />
-          <TouchableOpacity onPress={() => downItem(women, setWomen, "women")}>
+          <TouchableOpacity onPress={() => downItem(women, setWomen)}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
           <Text style={Style.text}>{women}</Text>
-          <TouchableOpacity onPress={() => upItem(women, setWomen, "women")}>
+          <TouchableOpacity onPress={() => upItem(women, setWomen)}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
         </View>
 
         <View style={Style.boxconteudo}>
           <Image style={Style.img} source={homem} />
-          <TouchableOpacity onPress={() => downItem(men, setMen, "men")}>
+          <TouchableOpacity onPress={() => downItem(men, setMen)}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
           <Text style={Style.text}>{men}</Text>
-          <TouchableOpacity onPress={() => upItem(men, setMen, "men")}>
+          <TouchableOpacity onPress={() => upItem(men, setMen)}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
         </View>

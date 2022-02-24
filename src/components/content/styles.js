@@ -14,7 +14,7 @@ const StylesContent = StyleSheet.create({
     height: 145,
     position: "absolute",
     bottom: 50,
-    zIndex: -1000
+    zIndex: -1000,
   },
 });
 

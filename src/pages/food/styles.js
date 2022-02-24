@@ -21,7 +21,7 @@ const Style = StyleSheet.create({
     width: 120,
     flexDirection: "column",
     fontSize: 18,
-    color: "#fff"
+    color: "#fff",
   },
   input: {
     height: 20,
