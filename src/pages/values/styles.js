@@ -14,9 +14,15 @@ const Style = StyleSheet.create({
 
   textStyle: {
     paddingLeft: 20,
-    color: "white",
+    color: "#fff",
     fontSize: 20,
     lineHeight: 24,
+  },
+
+  byPerson: {
+    fontWeight: "bold",
+    fontSize: 22,
+    color: "#fff",
   },
 });
 

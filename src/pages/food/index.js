@@ -59,7 +59,11 @@ function Food({ route, navigation }) {
         },
       };
 
-      let paying = people.men + people.women;
+      let paying = {
+        men: people.men,
+        women: people.women,
+        totalPaying: people.men + people.women,
+      };
 
       navigation.navigate("Topings", {
         paying,

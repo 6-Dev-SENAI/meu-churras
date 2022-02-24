@@ -35,9 +35,13 @@ function People({ navigation }) {
   }
 
   const next = () => {
-    if (kid === 0 && women === 0 && men === 0)
-      Alert.alert("Por favor, selecione pelo menos uma pessoa ao churrasco!");
-    else {
+    if (women === 0 && men === 0) {
+      if (kid !== 0) {
+        Alert.alert("Por favor, chame um adulto para continuar!");
+      } else {
+        Alert.alert("Por favor, selecione pelo menos uma pessoa ao churrasco!");
+      }
+    } else {
       navigation.navigate("Food", {
         people: {
           men,
@@ -67,12 +71,12 @@ function People({ navigation }) {
         />
 
         <View style={Style.boxconteudo}>
-          <Image style={Style.img} source={crianca} />
-          <TouchableOpacity onPress={() => downItem(kid, setKid)}>
+          <Image style={Style.img} source={homem} />
+          <TouchableOpacity onPress={() => downItem(men, setMen)}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text style={Style.text}>{kid}</Text>
-          <TouchableOpacity onPress={() => upItem(kid, setKid)}>
+          <Text style={Style.text}>{men}</Text>
+          <TouchableOpacity onPress={() => upItem(men, setMen)}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
         </View>
@@ -89,12 +93,12 @@ function People({ navigation }) {
         </View>
 
         <View style={Style.boxconteudo}>
-          <Image style={Style.img} source={homem} />
-          <TouchableOpacity onPress={() => downItem(men, setMen)}>
+          <Image style={Style.img} source={crianca} />
+          <TouchableOpacity onPress={() => downItem(kid, setKid)}>
             <Text style={Style.sinal}>-</Text>
           </TouchableOpacity>
-          <Text style={Style.text}>{men}</Text>
-          <TouchableOpacity onPress={() => upItem(men, setMen)}>
+          <Text style={Style.text}>{kid}</Text>
+          <TouchableOpacity onPress={() => upItem(kid, setKid)}>
             <Text style={Style.sinal}>+</Text>
           </TouchableOpacity>
         </View>

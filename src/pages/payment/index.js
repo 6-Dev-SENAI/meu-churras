@@ -18,6 +18,24 @@ function Payment({ route, navigation }) {
 
   const data = foods.concat(toping);
 
+  let subtotal = 0;
+
+  data.forEach((item) => {
+    subtotal += parseFloat(item.values.price);
+  });
+
+  const next = () => {
+    const totalByPerson = subtotal / paying.totalPaying;
+    const totalMen = totalByPerson * paying.men;
+    const totalWomen = totalByPerson * paying.women;
+
+    navigation.navigate("Values", {
+      totalByPerson: totalByPerson.toFixed(2),
+      totalMen: totalMen.toFixed(2),
+      totalWomen: totalWomen.toFixed(2),
+    });
+  };
+
   return (
     <Content>
       <View
@@ -29,11 +47,11 @@ function Payment({ route, navigation }) {
           height: height,
         }}
       >
-        <ChurrasTitle text="Lista e valores:" />
+        <ChurrasTitle text="Lista de valores:" />
 
         <FlatList
           data={data}
-          keyExtractor={(item) => item.name}
+          keyExtractor={(item, index) => `${item.name}/${index}`}
           renderItem={({ item }) => (
             <Item
               title={item.name}
@@ -44,7 +62,13 @@ function Payment({ route, navigation }) {
           )}
         />
 
-        <ButtonComponent title="Confirmar pedido" text="Values" />
+        <View style={Style.subtotalContainer}>
+          <View style={Style.line}></View>
+          <Text style={Style.subtotal}>Subtotal: R$ </Text>
+          <Text style={Style.value}>{subtotal.toFixed(2)}</Text>
+        </View>
+
+        <ButtonComponent title="Confirmar pedido" next={next} />
       </View>
     </Content>
   );
